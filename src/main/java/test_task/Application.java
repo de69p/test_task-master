@@ -53,7 +53,8 @@ public class Application implements CommandLineRunner {
         log.info(employeeService.fireEmployee("Dayna Whitworth").toString());
 
         log.info("7) Change salary for Kelis Andrews and get his ID...");
-        log.info(employeeService.changeSalary("Kelis Andrews").toString());
+        BigDecimal newSalary = new BigDecimal("23232");
+        log.info(employeeService.changeSalary("Kelis Andrews", newSalary).toString());
 
         log.info("8) Hire new employee in IT department and get his new ID...");
         log.info(employeeService.hireEmployee(new Employee()).toString());

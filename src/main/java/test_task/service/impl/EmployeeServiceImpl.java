@@ -45,9 +45,14 @@ public class EmployeeServiceImpl implements EmployeeService {
         return (long) employeeIdsToDelete.size();
     }
 
+//    @Override
+//    public Long changeSalary(String name) {
+//        return null;
+//    }
+
 
     @Override
-    public Long changeSalary(String name) {
+    public Long changeSalary(String name, BigDecimal newSalary) {
         Iterable<Employee> employees = employeeDao.findAll();
         List<Employee> employeeList = new ArrayList<>();
         employees.forEach(employeeList::add);

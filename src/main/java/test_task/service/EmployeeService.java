@@ -15,7 +15,9 @@ public interface EmployeeService {
 
     Long fireEmployee(String name);
 
-    Long changeSalary(String name);
+//    Long changeSalary(String name);
+
+    Long changeSalary(String name, BigDecimal newSalary);
 
     Long hireEmployee(Employee employee);
 }
